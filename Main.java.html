@@ -1,0 +1,35 @@
+import java.nio.charset.CoderResult;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Teacher teac1 = new Teacher("Cahit Zarifoğlu","edebiyat","0533 333 33 33");
+        Teacher teac2 = new Teacher("Albert Einstain","fizik","0544 444 44 44");
+        Teacher teac3 = new Teacher("Harezmi","matematik","0555 555 55 55");
+
+        Course edebiyat = new Course("Edebiyat","102","edebiyat");
+        Course fizik = new Course("Fizik","105","fizik");
+        Course matematik = new Course("Matematik","108","matematik");
+        Course verable = new Course("Sözlü Notu Edebiyat","111","edebiyatsözlü");
+        Course verablf = new Course("Sözlü Notu Fizik","114","fiziksözlü");
+        Course verbalm = new Course("Sözlü Notu Matematik","117","matematiksözlü");
+
+        System.out.println("=======================================================");
+        Student s1 = new Student("Nurullah Genç","3","4",edebiyat,fizik,matematik,verable,verablf,verbalm);
+        s1.addBulkExamNote(100,20,70);
+        s1.VerbalExamNote(50,70,80);
+        s1.isPass();
+        System.out.println("=======================================================");
+        Student s2 = new Student("Richard Feynman","6","4",edebiyat,fizik,matematik,verable,verablf,verbalm);
+        s2.addBulkExamNote(20,100,70);
+        s2.VerbalExamNote(70,80,50);
+        s2.isPass();
+        System.out.println("========================================================");
+        Student s3 = new Student("John Nash","9","4",edebiyat,fizik,matematik,verable,verablf,verbalm);
+        s3.addBulkExamNote(77,80,100);
+        s3.VerbalExamNote(70,70,90);
+        s3.isPass();
+        System.out.println("========================================================");
+    }
+
+}
